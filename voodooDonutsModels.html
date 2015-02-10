@@ -1,0 +1,76 @@
+<script>
+
+  function Voodoo(openHours, footTrafficRate, enterRate, avgDonutOrder) {
+    this.openHours = openHours;         //Store hours using 24hr clock [open, close]
+    this.footTrafficRate = footTrafficRate; //Hourly Foot Traffic [min, max]
+    this.enterRate = enterRate;         //Customer percentage that enter stores (1-100%)
+    this.avgDonutOrder = avgDonutOrder;
+    this.currentOpen;
+    this.currentTraffic;
+
+    this.open = function(time){
+      this.time = time;
+      if( time > this.openHours[0] && time < this.openHours[1] ){
+        this.currentOpen = true;
+      } else {
+        this.currentOpen = false;
+      };
+    };
+
+    /* Calculates how many customers enter the store */
+    this.traffic = function() {
+      var randomRate = Math.floor( Math.random() * 100 + 1 ); //range of 1-100
+      var footTrafficRange = this.footTrafficRate[1] - this.footTrafficRate[0]; //range of Foot Traffic
+      var trafficRateHour = Math.floor( (randomRate * footTrafficRange)/100 ) + this.footTrafficRate[0];
+      this.currentTraffic = trafficRateHour;
+      // console.log(randomRate);
+      // console.log(footTrafficRange);
+      // console.log(trafficRateHour);
+      return trafficRateHour;
+    };
+
+    /* Calculates how many donuts are purchased, following a foot traffic calculation */
+    this.purchased = function() {
+      var purchaseRate = Math.floor( (this.enterRate/100) * this.currentTraffic * this.avgDonutOrder );
+      // console.log(purchaseRate);
+      return purchaseRate;
+    };
+
+    /* Calculates how many donuts will be purchased each hour of a 24 hour day */
+    this.supply = function() {
+      var neededSupply = 0;
+      var purchasedThisHour;
+
+      for( i = 0; i < 24; i++ ) {
+        this.open(i * 100);
+        if(this.currentOpen) {
+          this.traffic();
+          purchasedThisHour = this.purchased();
+          neededSupply += purchasedThisHour;
+          console.log("Donuts needed during " + (i * 100) + " hour of the day may be " + purchasedThisHour + " donuts.");
+        } else {
+          //console.log("Donuts needed during " + (i * 100) + " hour of the day will be 0 donuts.");
+        }
+      };
+      console.log("Total donuts forecasted are " + neededSupply + " donuts.");
+      return neededSupply;
+    };
+
+  };
+
+  var vDowntown = new Voodoo([700, 1800], [80, 220], 10, 4);
+  var vCapitolHill = new Voodoo([700, 1800], [5, 45], 45, 2);
+  var vSouthLakeUnion = new Voodoo([700, 1800], [180, 250], 5, 6);
+  var vWedgewood = new Voodoo([700, 1800], [20, 60], 20, 1.5);
+  var vBallard = new Voodoo([700, 1800], [25, 175], 33, 1);
+
+  var vD = vDowntown.supply();
+  var vC = vCapitolHill.supply();
+  var vSLU = vSouthLakeUnion.supply();
+  var vW = vWedgewood.supply();
+  var vB = vBallard.supply();
+  var vTotal = vD + vC + vSLU + vW + vB;
+
+  console.log("Voodoo's total donuts forecasted to sell by all stores are " + vTotal + " donuts.");
+
+</script>

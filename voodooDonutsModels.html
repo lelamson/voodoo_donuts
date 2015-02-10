@@ -1,5 +1,9 @@
 <script>
 
+function getRandomInt(min, max){
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
   function Voodoo(openHours, footTrafficRate, enterRate, avgDonutOrder) {
     this.openHours = openHours;         //Store hours using 24hr clock [open, close]
     this.footTrafficRate = footTrafficRate; //Hourly Foot Traffic [min, max]
@@ -19,13 +23,12 @@
 
     /* Calculates how many customers enter the store */
     this.traffic = function() {
-      var randomRate = Math.floor( Math.random() * 100 + 1 ); //range of 1-100
+      //var randomRate = Math.floor( Math.random() * 100 + 1 ); //range of 1-100
       var footTrafficRange = this.footTrafficRate[1] - this.footTrafficRate[0]; //range of Foot Traffic
       var trafficRateHour = Math.floor( (randomRate * footTrafficRange)/100 ) + this.footTrafficRate[0];
+      var random = getRandomInt(this.footTrafficRate[0], this.footTrafficRate[1]);
+
       this.currentTraffic = trafficRateHour;
-      // console.log(randomRate);
-      // console.log(footTrafficRange);
-      // console.log(trafficRateHour);
       return trafficRateHour;
     };
 
@@ -58,11 +61,11 @@
 
   };
 
-  var vDowntown = new Voodoo([700, 1800], [80, 220], 10, 4);
-  var vCapitolHill = new Voodoo([700, 1800], [5, 45], 45, 2);
-  var vSouthLakeUnion = new Voodoo([700, 1800], [180, 250], 5, 6);
-  var vWedgewood = new Voodoo([700, 1800], [20, 60], 20, 1.5);
-  var vBallard = new Voodoo([700, 1800], [25, 175], 33, 1);
+  var vDowntown = new Voodoo( [700, 1800], [80, 220], 10, 4);
+  var vCapitolHill = new Voodoo( [700, 1800], [5, 45], 45, 2);
+  var vSouthLakeUnion = new Voodoo( [700, 1800], [180, 250], 5, 6);
+  var vWedgewood = new Voodoo( [700, 1800], [20, 60], 20, 1.5);
+  var vBallard = new Voodoo( [700, 1800], [25, 175], 33, 1);
 
   var vD = vDowntown.supply();
   var vC = vCapitolHill.supply();

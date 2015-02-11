@@ -1,13 +1,15 @@
 # voodoo_donuts
 
+
+Clean JS code to combine four functions into a single forecast function.  Add createCell function to output forecast data into table within HTML.  Began to build input form in HTML.
+
+
 The voodooDonutsModels.html contains my JS code to model an Object constructor to for a Voodoo Donuts store. Each new Object will be passed the 4 parameters listed on the spreadsheet on canvas.  In addition to those 4 parameters, I declared 2 additional global variables that store the value of my open & traffic functions.
 The open function takes the time as 24 hour military clock, and verifies if the voodoo store will be open.
 My traffic function creates a random number between 1-100, calculates the range amount from taking the difference of the maximum and minimum amount of hourly foot rate.  Those two values are multipled to each other before adding the minimum hourly rate, to determine the random hourly foot rate, that falls within the range provided.
 The purchased function uses the traffic functions calculated value, and multiplies it by the percentage of customers that will enter store along with multiplying it the average donuts purchased per transaction.
 The supply function will iterate through a 24 hour period and forecast how many donuts will be purchased for each hour and console.log the results.  The function will provide lastly provide the total forecasted donuts in that 24 hour period.
 Created 5 Voodoo objects utilizing the canvas spreadsheet and the results of how many each store is forecasted in donuts below via developers console within Chrome:
-
-
 Donuts needed during 800 hour of the day may be 51 donuts.
 Donuts needed during 900 hour of the day may be 77 donuts.
 Donuts needed during 1000 hour of the day may be 38 donuts.

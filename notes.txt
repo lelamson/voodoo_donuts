@@ -1,0 +1,9 @@
+
+
+page 130 HTML + CSS
+
+ref JS page 222 - add next cell to table
+var row = doc.getElementById('downtown');
+var cell1 = doc.createElement('td');
+cell1.textContent = this.location;
+row.appendChild(cell1);

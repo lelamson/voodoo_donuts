@@ -8,7 +8,7 @@
     <header>Voodoo Donuts Daily Store Forecast</header>
 
     <nav>
-      <fieldset>
+<!--       <fieldset>
       <form action="url" method="post">
         <p>Location Name:
           <input type="text" name="name" size="30" maxlength="30" placeholder="Name" />
@@ -26,6 +26,18 @@
           <input type="text" name="avgOrder" size="15" maxlength="15" placeholder="3" />
         </p>
       </form>
+      </fieldset> -->
+
+      <fieldset>
+        <form action="url">
+          <p>Select which Voodoo donut shops to display hourly forecast:<br>
+            <input id="cbDT" type="checkbox" name="cboxDT" />Downtown
+            <input id="cbCH" type="checkbox" name="cboxCH" />Capitol Hill
+            <input id="cbSLU" type="checkbox" name="cboxSLU" />South Lake Union
+            <input id="cbWW" type="checkbox" name="cboxWW" />Wedgewood
+            <input id="cbBA" type="checkbox" name="cboxBA" />Ballard
+          </p>
+        </form>
       </fieldset>
     </nav>
 
@@ -77,5 +89,10 @@
       </tfoot>
     </table>
     <script src="voodooDonutsModels.js"></script>
+    <script>
+
+
+
+    </script>
   </body>
 </html>

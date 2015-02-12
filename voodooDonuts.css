@@ -1,0 +1,63 @@
+header {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #FE23EF;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-shadow: white 3px 3px;
+  font-family: 'Neuton', serif;
+}
+
+body {
+  background-image: url(http://media.oregonlive.com/photo-contest/photo/voodoo-doughnutjpg-3592b7277a8adc1b.jpg);
+}
+
+nav {
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form {
+  vertical-align: center;
+}
+
+p.form {
+  width: 650px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: 'Neuton', serif;
+  background-color: #FE23EF;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  padding: 10px 25px;
+}
+
+input {
+  display: inline-block;
+}
+
+table {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Neuton', serif;
+}
+thead {
+
+}
+#downtown, #slu, #ballard {
+  background-color: #3C6367;
+  color: #13D62B;
+}
+
+thead, #capitolhill, #wedgewood {
+  background-color: #13DB13;
+  color: #132D2C;
+}

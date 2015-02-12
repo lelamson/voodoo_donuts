@@ -1,5 +1,8 @@
 # voodoo_donuts
 
+Add CSS to style the webpage.
+
+Add a forms checkbox and built runForecast function to display each donut shops forecast upon clicking the checkbox.
 
 Clean JS code to combine four functions into a single forecast function.  Add createCell function to output forecast data into table within HTML.  Began to build input form in HTML.
 

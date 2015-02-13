@@ -7,63 +7,72 @@
   </head>
 
   <body>
-    <header>Voodoo Donuts Daily Store Forecast</header>
+    <div id="main">
+      <header>Voodoo Donuts Daily Store Forecast</header>
+      <div id="homer">
+        <img src="http://www.simpsonswallpapers.net/wp-content/uploads/wallpapers/homer_eating_donut_with_sprinkles_wallpaper_-_1280x1024.jpg" width="200px" height="160px" />
+      </div>
 
-    <nav>
-      <form action="url">
-        <p class="form">Select the Voodoo donut shop(s) for hourly forecast:<br>
-          <input id="cbDT" type="checkbox" name="cboxDT" />Downtown
-          <input id="cbCH" type="checkbox" name="cboxCH" />Capitol Hill
-          <input id="cbSLU" type="checkbox" name="cboxSLU" />South Lake Union
-          <input id="cbWW" type="checkbox" name="cboxWW" />Wedgewood
-          <input id="cbBA" type="checkbox" name="cboxBA" />Ballard
-        </p>
-      </form>
-    </nav>
+      <nav>
+        <form action="url">
+          <p class="form">Select the Voodoo donut shop(s) for hourly forecast:<br>
+            <input id="cbDT" type="checkbox" name="cboxDT" />Downtown
+            <input id="cbCH" type="checkbox" name="cboxCH" />Capitol Hill
+            <input id="cbSLU" type="checkbox" name="cboxSLU" />South Lake Union
+            <input id="cbWW" type="checkbox" name="cboxWW" />Wedgewood
+            <input id="cbBA" type="checkbox" name="cboxBA" />Ballard
+          </p>
+        </form>
+      </nav>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Location / Time</th>
-          <th>7am</th>
-          <th>8am</th>
-          <th>9am</th>
-          <th>10am</th>
-          <th>11am</th>
-          <th>12pm</th>
-          <th>1pm</th>
-          <th>2pm</th>
-          <th>3pm</th>
-          <th>4pm</th>
-          <th>5pm</th>
-          <th>Total</th>
-        </tr>
-      </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Location / Time</th>
+            <th>7am</th>
+            <th>8am</th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+            <th>12pm</th>
+            <th>1pm</th>
+            <th>2pm</th>
+            <th>3pm</th>
+            <th>4pm</th>
+            <th>5pm</th>
+            <th>Total</th>
+          </tr>
+        </thead>
 
-      <tbody>
+        <tbody>
 
-        <tr id='downtown'>
-          <th>Downtown</th>
-        </tr>
+          <tr id='downtown'>
+            <th>Downtown</th>
+          </tr>
 
-        <tr id="capitolhill">
-          <th>Capitol Hill</th>
-        </tr>
+          <tr id="capitolhill">
+            <th>Capitol Hill</th>
+          </tr>
 
-        <tr id="slu">
-          <th>South Lake Union</th>
-        </tr>
+          <tr id="slu">
+            <th>South Lake Union</th>
+          </tr>
 
-        <tr id="wedgewood">
-          <th>Wedgewood</th>
-        </tr>
+          <tr id="wedgewood">
+            <th>Wedgewood</th>
+          </tr>
 
-        <tr id="ballard">
-          <th>Ballard</th>
-        </tr>
-
-      </tbody>
-    </table>
-    <script src="voodooDonuts.js"></script>
+          <tr id="ballard">
+            <th>Ballard</th>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <p id="hodor">Hodor, hodor; hodor hodor... Hodor hodor hodor? Hodor. Hodor hodor, hodor. Hodor hodor - hodor?! Hodor hodor; hodor hodor; hodor hodor hodor hodor. Hodor. Hodor. Hodor hodor hodor?!
+        <img id="hodorimg" src='http://img4.imageshack.us/img4/3972/hodor.jpg' width="200px" height="193" />
+      </p>
+      </div>
+      <script src="voodooDonuts.js"></script>
+    </div>
   </body>
 </html>

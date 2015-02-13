@@ -1,5 +1,7 @@
 # voodoo_donuts
 
+Add fixed position homer image.  Add hodor text with absolute position and hodor image with relative position to the text.
+
 Add CSS to style the webpage.
 
 Add a forms checkbox and built runForecast function to display each donut shops forecast upon clicking the checkbox.

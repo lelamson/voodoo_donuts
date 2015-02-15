@@ -1,4 +1,6 @@
 # voodoo_donuts
+Add transition on hover to Homer image to rotate 720 degrees and translate across the screen.  Add animation to Hodor image that travels in a circle every 3s, that occurs continuously.
+
 
 Add fixed position homer image.  Add hodor text with absolute position and hodor image with relative position to the text.
 
